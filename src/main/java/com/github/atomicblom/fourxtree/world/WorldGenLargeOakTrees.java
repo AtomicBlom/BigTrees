@@ -1,27 +1,25 @@
-package com.github.atomicblom.bigtrees.world;
+package com.github.atomicblom.fourxtree.world;
 
-import com.github.atomicblom.bigtrees.utility.Logger;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenBigTree;
 import java.util.Random;
 
 
-public class BigTreesWorldGenBigTree extends WorldGenBigTree
+public class WorldGenLargeOakTrees extends WorldGenBigTree
 {
-    public BigTreesWorldGenBigTree(boolean notify)
+    public WorldGenLargeOakTrees(boolean notify)
     {
         super(notify);
     }
 
     //FIXME: I don't think we need depth if we reinstantiate the object each level.
-    int depth = 0;
+    //int depth = 0;
 
     @Override
     public boolean generate(World worldIn, Random rand, BlockPos position)
     {
-        depth++;
+        //depth++;
         world = worldIn;
         basePos = position;
         this.rand = new Random(rand.nextLong());
@@ -34,11 +32,11 @@ public class BigTreesWorldGenBigTree extends WorldGenBigTree
 
         if (!validTreeLocation())
         {
-            depth--;
-            if (depth == 0)
-            {
+            //depth--;
+            //if (depth == 0)
+            //{
                 world = null; //Fix vanilla Mem leak, holds latest world
-            }
+            //}
             return false;
         }
         else
@@ -47,11 +45,11 @@ public class BigTreesWorldGenBigTree extends WorldGenBigTree
             generateLeaves();
             generateTrunk();
             generateLeafNodeBases();
-            depth--;
-            if (depth == 0)
-            {
+            //depth--;
+            //if (depth == 0)
+            //{
                 world = null; //Fix vanilla Mem leak, holds latest world
-            }
+            //}
             return true;
         }
     }

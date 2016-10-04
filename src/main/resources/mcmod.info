@@ -1,14 +1,14 @@
 [
 {
-  "modid": "bigtrees",
-  "name": "Big Trees",
-  "description": "Like a big mac, but greener.",
+  "modid": "4xtree",
+  "name": "4xTree",
+  "description": "It's pronounced 'Forestry'.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["AtomicBlom"],
-  "credits": "The Forge and FML guys, for making this example",
+  "credits": "Rorax for the idea, Mezz for the name",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
